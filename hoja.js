@@ -1,29 +1,24 @@
-        //Semana 1 de Fuerza
-       //Lunes
-/*Back Squat
- 5x8 al 74%
- 4x6 al 80%
- 3x4 al 90%
- */
+/*Contador deposito autos 0km en fabrica disponibles  y valor total del deposito en la medida en la que van 
+ingresando los autos al deposito,
+ el deposito tiene un limite de 500 autos y cada auto tiene un valor de 12.000 usd
 
+*/
 
-    function porcentajes_back_squat(back_rm){
+let contador_autos = 0 ;
 
-        let porcentaje_74 = back_rm * 0.74 ;
-        let porcentaje_80 = back_rm * 0.80 ;
-        let porcentaje_90 = back_rm * 0.90 ;
-        console.log("5 series de 8 repeticiones con", porcentaje_74);
-        console.log ("4 series de 6 repeticiones con", porcentaje_80);
-        console.log ("3 series de 4 repeticiones con ", porcentaje_90); 
+while (contador_autos < 500){
 
-
-    }
+    let numero = parseInt(prompt("Ingrese cantidad de autos"));
     
-    let rm_back = parseFloat (prompt("Ingrese su RM de Back Squat en KG"))
-    porcentajes_back_squat(rm_back);
 
+    contador_autos= contador_autos + numero
 
+    let espacio_disonible = 500 - contador_autos
+    
+    console.log("Se ocuparon :" , contador_autos);
 
-
+    console.log("Se encuentra disponibles :" , espacio_disonible);
+    console.log("El valor del deposito hasta el momento son : ", (contador_autos*12000));
+}
 
 
